@@ -1,0 +1,241 @@
+.emp-page{
+  padding: 22px;
+}
+
+.emp-title{
+  font-size: 34px;
+  margin: 0;
+  color: #0f172a;
+}
+
+.emp-subtitle{
+  margin: 6px 0 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* Card de busca */
+.emp-searchCard{
+  margin-top: 16px;
+  background: #fff;
+  border: 1px solid #e8edf3;
+  border-radius: 14px;
+  padding: 14px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+}
+
+.emp-searchRow{
+  display:flex;
+  gap: 12px;
+  align-items:center;
+}
+
+.emp-searchInputWrap{
+  flex:1;
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  border: 1px solid #dbe3ef;
+  border-radius: 12px;
+  padding: 0 12px;
+  height: 46px;
+  background: #fff;
+}
+
+.emp-searchIcon{ opacity: .7; }
+
+.emp-searchInput{
+  border: none;
+  outline: none;
+  flex: 1;
+  height: 100%;
+  font-size: 14px;
+}
+
+.emp-filterBtn{
+  height: 46px;
+  padding: 0 16px;
+  border-radius: 12px;
+  border: 1px solid #dbe3ef;
+  background: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  display:flex;
+  align-items:center;
+  gap: 10px;
+}
+
+.emp-filterBtn:hover{ background:#f8fafc; }
+
+.emp-searchMeta{
+  margin-top: 10px;
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* Card da tabela */
+.emp-tableCard{
+  margin-top: 18px;
+  background: #fff;
+  border: 1px solid #e8edf3;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.emp-table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.emp-table thead th{
+  text-align: left;
+  padding: 14px 16px;
+  font-size: 13px;
+  color: #334155;
+  background: #fff;
+  border-bottom: 1px solid #e8edf3;
+}
+
+.emp-table tbody td{
+  padding: 16px;
+  border-bottom: 1px solid #eef2f7;
+  font-size: 14px;
+  color: #0f172a;
+}
+
+.emp-table tbody tr:hover{
+  background: #f8fafc;
+  cursor: pointer;
+}
+
+.emp-thActions{ width: 80px; text-align: right; }
+.emp-actions{ text-align: right; }
+
+.emp-muted{
+  color: #475569;
+}
+
+/* Nome + avatar */
+.emp-nameCell{
+  display:flex;
+  align-items:center;
+  gap: 12px;
+}
+
+.emp-avatar{
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  background: #dbeafe;
+  color: #2563eb;
+  display:grid;
+  place-items:center;
+  font-weight: 800;
+  font-size: 13px;
+}
+
+.emp-name{
+  font-weight: 800;
+}
+
+/* Badge de status */
+.emp-badge{
+  display:inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 12px;
+}
+
+.badge--green{ background: #dcfce7; color:#166534; }
+.badge--red{ background: #fee2e2; color:#991b1b; }
+.badge--gray{ background: #f1f5f9; color:#334155; }
+
+/* Kebab */
+.emp-kebab{
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 20px;
+  color: #334155;
+}
+
+.emp-kebab:hover{
+  background: #f1f5f9;
+}
+
+/* Empty state */
+.emp-empty{
+  padding: 22px;
+  color: #64748b;
+}
+
+/* Paginação */
+.emp-pagination{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  padding: 14px 16px;
+}
+
+.emp-pageInfo{
+  font-size: 13px;
+  color: #64748b;
+}
+
+.emp-pageBtns{
+  display:flex;
+  gap: 8px;
+}
+
+.emp-pageBtn{
+  height: 36px;
+  padding: 0 14px;
+  border-radius: 10px;
+  border: 1px solid #dbe3ef;
+  background:#fff;
+  cursor:pointer;
+  font-weight: 700;
+}
+
+.emp-pageBtn:disabled{
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+.emp-actionsWrap {
+  position: relative;
+  display: inline-block;
+}
+
+.emp-actionsMenu {
+  position: absolute;
+  right: 0;
+  top: 40px;
+  min-width: 160px;
+  background: #fff;
+  border: 1px solid #e8edf3;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+  overflow: hidden;
+  z-index: 20;
+}
+
+.emp-actionsItem {
+  width: 100%;
+  padding: 10px 12px;
+  background: transparent;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.emp-actionsItem:hover {
+  background: #f8fafc;
+}
+

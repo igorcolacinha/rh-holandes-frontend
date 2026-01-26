@@ -1,56 +1,33 @@
-import { MainLayout } from "../layout/MainLayout";
-import { sincronizarColaboradores } from "../services/employeesService";
-import { useState } from "react";
+import { useEmployeesTotal } from "../hooks/useEmployeesTotal";
+import "../styles/dashboard.css";
 
 export function Dashboard() {
-  const [resultado, setResultado] = useState<any>(null);
-  const [loading, setLoading] = useState(false);
-
-  async function handleSync() {
-    try {
-      setLoading(true);
-      const res = await sincronizarColaboradores();
-      setResultado(res);
-    } catch (err) {
-      console.error(err);
-      alert("Erro ao sincronizar colaboradores");
-    } finally {
-      setLoading(false);
-    }
-  }
+  const { data: total, isLoading } = useEmployeesTotal();
 
   return (
-    <MainLayout>
-      <h2>Dashboard</h2>
+    <div className="dash-page">
+      <div className="dash-header">
+        <div>
+          <h1 className="dash-title">Dashboard</h1>
+          <p className="dash-subtitle">Visão geral do RH</p>
+        </div>
+      </div>
 
-      <button
-        onClick={handleSync}
-        disabled={loading}
-        style={{
-          padding: "10px 16px",
-          borderRadius: 8,
-          border: "none",
-          background: "#2563eb",
-          color: "#fff",
-          cursor: "pointer",
-        }}
-      >
-        {loading ? "Sincronizando..." : "Sincronizar Colaboradores"}
-      </button>
+      <div className="dash-grid">
+        <div className="dash-card">
+          <div className="dash-cardTop">
+            <div>
+              <div className="dash-cardLabel">Total de colaboradores</div>
+              <div className="dash-cardValue">
+                {isLoading ? "—" : (total ?? 0)}
+              </div>
+              <div className="dash-cardHint">Base cadastrada no sistema</div>
+            </div>
 
-      {resultado && (
-        <pre
-          style={{
-            marginTop: 20,
-            background: "#fff",
-            padding: 16,
-            borderRadius: 8,
-            maxWidth: 600,
-          }}
-        >
-          {JSON.stringify(resultado, null, 2)}
-        </pre>
-      )}
-    </MainLayout>
+            <div className="dash-cardIcon">👥</div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }

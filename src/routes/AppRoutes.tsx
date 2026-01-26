@@ -15,6 +15,7 @@ export function AppRoutes() {
         <Route path="/employees" element={<EmployeesListPage />} />
         <Route path="/employees/:id" element={<EmployeeDetailsPage />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        
         <Route path="/" element={<Navigate to="/dashboard" replace />} />
       </Route>
     </Routes>

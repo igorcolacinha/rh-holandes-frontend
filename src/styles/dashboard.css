@@ -73,3 +73,14 @@
 @media (max-width: 700px){
   .dash-card{ grid-column: span 12; }
 }
+
+.dash-cardHint.positivo {
+  color: #dc2626; /* vermelho */
+  font-weight: 600;
+}
+
+.dash-cardHint.negativo {
+  color: #16a34a; /* verde */
+  font-weight: 600;
+}
+

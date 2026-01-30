@@ -186,3 +186,168 @@
   line-height: 1.45;
   white-space: pre-wrap; /* mantém quebra de linha do conteúdo */
 }
+/* ===== Faltas/Afastamentos - Ações / Badges / Modal ===== */
+
+/* Header do card com título + botão à direita */
+.empd-cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+/* Botões (seguindo padrão do seu azul) */
+.empd-btnPrimary {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.05s ease;
+}
+
+.empd-btnPrimary:hover {
+  background: #1d4ed8;
+}
+
+.empd-btnPrimary:active {
+  transform: translateY(1px);
+}
+
+.empd-btnPrimary:disabled {
+  background: #93c5fd;
+  cursor: not-allowed;
+}
+
+/* Botão secundário */
+.empd-btnSecondary {
+  background: #f1f5f9;
+  color: #0f172a;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.empd-btnSecondary:hover {
+  background: #e2e8f0;
+}
+
+.empd-btnSecondary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Remover (só manual) */
+.empd-btnDangerLink {
+  background: none;
+  border: none;
+  color: #dc2626;
+  font-weight: 800;
+  cursor: pointer;
+  padding: 4px 6px;
+}
+
+.empd-btnDangerLink:hover {
+  text-decoration: underline;
+}
+
+.empd-btnDangerLink:disabled {
+  color: #fca5a5;
+  cursor: not-allowed;
+}
+
+/* Badge Origem */
+.empd-pill {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.empd-pill--convenia {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.empd-pill--manual {
+  background: #ede9fe;
+  color: #5b21b6;
+}
+
+/* Modal */
+.empd-modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  z-index: 9999;
+}
+
+.empd-modalCard {
+  width: min(720px, 100%);
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.empd-modalTitle {
+  margin: 0 0 14px;
+  font-size: 18px;
+  font-weight: 900;
+  color: #101828;
+}
+
+.empd-modalGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.empd-modalGridFull {
+  grid-column: 1 / -1;
+}
+
+/* Inputs dentro do modal */
+.empd-modalCard input,
+.empd-modalCard select,
+.empd-modalCard textarea {
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 14px;
+  color: #0f172a;
+}
+
+.empd-modalCard input:focus,
+.empd-modalCard select:focus,
+.empd-modalCard textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+.empd-modalCard label {
+  display: grid;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 800;
+  color: #334155;
+}
+
+.empd-modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 16px;
+}
